@@ -10,6 +10,28 @@ with st.container(border=True):
         st.caption('Sumber: https://gis.dukcapil.kemendagri.go.id/peta/')
 
 st.subheader('', divider='orange')
+kol1a, kol1b, kol1c, kol1d = st.columns(4)
+with kol1a:
+    with st.container(border=True):
+        st.title('2.429,03')
+        st.caption('Luas Wilayah')
+
+with kol1b:
+    with st.container(border=True):
+        st.title('17')
+        st.caption('Distrik')
+
+with kol1c:
+    with st.container(border=True):
+        st.title('5')
+        st.caption('Kelurahan')
+
+with kol1d:
+    with st.container(border=True):
+        st.title('160')
+        st.caption('Kampung')
+
+st.subheader('', divider='orange')
 
 from data import datapenduduk
 penduduk2 = datapenduduk.groupby(['Kabupaten/Kota', 'Kecamatan'])['Jumlah Penduduk'].sum().reset_index()
