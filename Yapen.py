@@ -13,23 +13,27 @@ st.subheader('', divider='orange')
 kol1a, kol1b, kol1c, kol1d = st.columns(4)
 with kol1a:
     with st.container(border=True):
-        st.title('2.429,03')
-        st.caption('Luas Wilayah')
+        with st.container(border=True):
+            st.title('2.429,03')
+            st.caption('Luas Wilayah')
 
 with kol1b:
     with st.container(border=True):
-        st.title('17')
-        st.caption('Distrik')
+        with st.container(border=True):
+            st.title(':blue[17]')
+            st.caption(':blue[Distrik]')
 
 with kol1c:
     with st.container(border=True):
-        st.title('5')
-        st.caption('Kelurahan')
+        with st.container(border=True):
+            st.title(':green[5]')
+            st.caption(':green[Kelurahan]')
 
 with kol1d:
     with st.container(border=True):
-        st.title('160')
-        st.caption('Kampung')
+        with st.container(border=True):
+            st.title(':orange[160]')
+            st.caption(':orange[Kampung]')
 
 st.subheader('', divider='orange')
 
@@ -38,7 +42,7 @@ penduduk2 = datapenduduk.groupby(['Kabupaten/Kota', 'Kecamatan'])['Jumlah Pendud
 keluarga = datapenduduk.groupby(['Kabupaten/Kota', 'Kecamatan'])['Jumlah Kepala Keluarga'].sum().reset_index()
 
 with st.container(border=True):
-    st.subheader(f'Jumlah Penduduk')
+    st.subheader(f'Jumlah Penduduk: 116.214 Jiwa')
     kol1a, kol1b = st.columns(2)
     with kol1a:
         with st.container(border=True):
@@ -57,7 +61,7 @@ with st.container(border=True):
 st.subheader('', divider='orange')
 
 with st.container(border=True):
-    st.subheader(f'Jumlah KK')
+    st.subheader(f'Jumlah Keluarga: 34.060 KK')
     kol2a, kol2b = st.columns(2)
     with kol2a:
         with st.container(border=True):
